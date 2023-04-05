@@ -7,7 +7,7 @@ export function MainRoutingStack() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Home" component={AnimeHome} />
-            <Stack.Screen name="AnimeInfo" component={AnimeInfo} options={{ headerShown: true, title: "" }} />
+            <Stack.Screen name="AnimeInfo" component={AnimeInfo} options={{ title: "" }} />
         </Stack.Navigator>
     );
 }

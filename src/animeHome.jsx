@@ -10,7 +10,7 @@ const AnimeHome = () => {
         setSearchQuery(query);
     }
     const getAnimesonQuery = async () => {
-        const res = await fetch(`https://api.jikan.moe/v4/anime?q=${searchQuery}&limit=30`)
+        const res = await fetch(`https://api.jikan.moe/v4/anime?q=${searchQuery}&limit=40`)
         const resData = await res.json()
         setAnimes(resData.data)
     }
@@ -24,8 +24,7 @@ const AnimeHome = () => {
                     placeholderTextColor="red"
                     className="w-[85vw] text-lg text-red-600 font-semibold text-justify ml-2"
                     onChangeText={onChangeSearch}
-                    value={searchQuery}
-                />
+                    value={searchQuery} />
                 <TouchableOpacity className="ml-1" onPress={getAnimesonQuery}>
                     <MaterialIcons name="search" color={"red"} size={25} />
                 </TouchableOpacity>
